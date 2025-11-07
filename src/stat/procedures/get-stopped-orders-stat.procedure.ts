@@ -12,7 +12,7 @@ export class GetStoppedOrdersStatProcedure implements IExecutable<any> {
     private readonly orderModel: typeof Order,
   ) {}
 
-  async execute(startDate: string, endDate: string  ) {
+  async execute(startDate: string, endDate: string) {
     const orders = await this.orderModel.count({
       where: {
         status: OrderStatusEnum.COMPLETED,

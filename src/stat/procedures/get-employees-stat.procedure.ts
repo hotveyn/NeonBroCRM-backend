@@ -18,7 +18,10 @@ export class GetEmployeesStatProcedure implements IExecutable<any> {
     private readonly orderStageModel: typeof OrderStage,
   ) {}
 
-  async execute(startDate: string, endDate: string  ): Promise<
+  async execute(
+    startDate: string,
+    endDate: string,
+  ): Promise<
     {
       id: any;
       code: string;
